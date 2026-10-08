@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070b78;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(7, 11, 19, 1.9);
+    border-bottom: 1px solid #1b2433;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > span {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #00e676,
+        #00bfa5
+    );
+
+    color: #00150d;
+    font-weight: 900;
+}
+
+.logo h2 {
+    font-size: 16px;
+}
+
+.logo small {
+    color: #00e676;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aab4c5;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e676;
+}
+
+.login-btn {
+    padding: 10px 22px;
+    border: 1px solid #00e676;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #00e676;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #00e676;
+    color: #06110b;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 680px;
+    padding: 90px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(0, 230, 118, 0.08),
+            transparent 30%
+        );
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 14px;
+    border: 1px solid #243244;
+    border-radius: 30px;
+
+    color: #00e676;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #00e67;
+}
+
+.hero p {
+    color: #9da8ba;
+    max-width: 550px;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 24px;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    border: none;
+    background: #00e676;
+    color: #00150d;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 230, 118, 0.2);
+}
+
+.secondary-btn {
+    background: #101722;
+    color: white;
+    border: 1px solid #283446;
+}
+
+
+/* HERO CHART CARD */
+
+.hero-card {
+    padding: 25px;
+
+    background: #070b13;
+    border: 1px solid #1e2938;
+    border-radius: 20px;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+}
+
+.card-top,
+.chart-footer,
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-top {
+    color: #aeb8c8;
+}
+
+.live {
+    color: #00e676;
+    font-size: 11px;
+}
+
+.price {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.profit {
+    color: #00e676;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.hero-card canvas {
+    height: 220px !important;
+}
+
+.chart-footer {
+    margin-top: 15px;
+    color: #657286;
+    font-size: 12px;
+}
+
+
+/* SECTION */
+
+.markets-section {
+    padding: 100px 7%;
+    background: #090e17;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title > span,
+.analysis-text > span,
+.about-card span {
+    color: #00e676;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    margin: 8px 0;
+}
+
+.section-title p {
+    color: #788497;
+}
+
+
+/* MARKET CARDS */
+
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.market-card {
+    padding: 25px;
+
+    background: #0e1520;
+    border: 1px solid #1c2737;
+    border-radius: 16px;
+
+    transition: 0.3s;
+}
+
+.market-card:hover {
+    transform: translateY(-7px);
+    border-color: #00e676;
+}
+
+.market-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.coin {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #182333;
+
+    color: #00e676;
+    font-weight: bold;
+}
+
+.market-card h3 {
+    font-size: 15px;
+}
+
+.market-card small {
+    color: #667286;
+    font-size: 9px;
+}
+
+.market-card > h2 {
+    font-size: 24px;
+}
+
+.green {
+    color: #00e676 !important;
+}
+
+.red {
+    color: #ff5268 !important;
+}
+
+
+/* ANALYSIS */
+
+.analysis {
+    padding: 110px 7%;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.analysis-text h2 {
+    font-size: 45px;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.analysis-text strong {
+    color: #00e676;
+}
+
+.analysis-text > p {
+    color: #8995a8;
+    max-width: 500px;
+}
+
+.stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats strong {
+    font-size: 25px;
+    color: white;
+}
+
+.stats span {
+    color: #687588;
+    font-size: 11px;
+}
+
+
+/* MAIN CHART */
+
+.analysis-chart {
+    padding: 30px;
+
+    background: #0d141f;
+    border: 1px solid #1d2939;
+    border-radius: 20px;
+}
+
+.chart-header small {
+    color: #718096;
+}
+
+.chart-header h2 {
+    margin-top: 5px;
+}
+
+.analysis-chart canvas {
+    margin-top: 25px;
+    height: 300px !important;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 90px 7%;
+    background: #090e17;
+}
+
+.about-card {
+    max-width: 1000px;
+    margin: auto;
+
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #101a25,
+        #0b111a
+    );
+
+    border: 1px solid #1e2b3d;
+    border-radius: 25px;
+}
+
+.profile-circle {
+    min-width: 120px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #00e676,
+        #00a884
+    );
+
+    color: #00150d;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.about-card h2 {
+    font-size: 30px;
+    margin: 5px 0 10px;
+}
+
+.about-card p {
+    color: #8b97a8;
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 35px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #1b2534;
+    color: #647084;
+    font-size: 12px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo > strong {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+    background: #00e676;
+    color: #00150d;
+}
+
+.footer-logo h3 {
+    color: white;
+    font-size: 13px;
+}
+
+.footer-logo small {
+    color: #00e676;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .market-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analysis {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .market-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .markets-section,
+    .analysis,
+    .about {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .section-title h2,
+    .analysis-text h2 {
+        font-size: 32px;
+    }
+
+    .stats {
+        gap: 15px;
+    }
+
+    .about-card {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

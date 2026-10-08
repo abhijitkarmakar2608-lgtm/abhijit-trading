@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abhijit Karmakar | Trading</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <span>AK</span>
+            <div>
+                <h2>Abhijit Karmakar</h2>
+                <small>TRADING</small>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#markets">Markets</a>
+            <a href="#analysis">Analysis</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="login-btn">Login</button>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+               MARKET DASHBOARD
+            </div>
+
+            <h1>
+                Trade Smart.<br>
+                <span>Think Bigger.</span>
+            </h1>
+
+            <p>
+                Welcome to Abhijit Karmakar Trading a modern platform
+                for market tracking, analysis and trading education.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="scrollToMarkets()">
+                    Explore Markets 
+                </button>
+
+                <button class="secondary-btn" onclick="showMessage()">
+                    Start Learning
+                </button>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="card-top">
+                <span>Market Overview</span>
+                <span class="live"> LIVE</span>
+            </div>
+
+            <div class="price">
+                 2,458.75
+                <span class="profit">UP (+2.48%)</span>
+            </div>
+
+            <canvas id="heroChart"></canvas>
+
+            <div class="chart-footer">
+                <span>Today</span>
+                <span>1D</span>
+                <span>1W</span>
+                <span>1M</span>
+                <span>1Y</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MARKET CARDS -->
+    <section class="markets-section" id="markets">
+
+        <div class="section-title">
+            <span>MARKETS</span>
+            <h2>Market Overview</h2>
+            <p>Track popular market instruments from one dashboard.</p>
+        </div>
+
+        <div class="market-grid">
+
+            <div class="market-card">
+                <div class="market-name">
+                    <div class="coin">N</div>
+                    <div>
+                        <h3>NIFTY 50</h3>
+                        <small>INDEX</small>
+                    </div>
+                </div>
+
+                <h2>25,432.80</h2>
+                <p class="green">UP +1.24%</p>
+            </div>
+
+
+            <div class="market-card">
+                <div class="market-name">
+                    <div class="coin">S</div>
+                    <div>
+                        <h3>SENSEX</h3>
+                        <small>INDEX</small>
+                    </div>
+                </div>
+
+                <h2>83,765.42</h2>
+                <p class="green">UP +0.86%</p>
+            </div>
+
+
+            <div class="market-card">
+                <div class="market-name">
+                    <div class="coin">G</div>
+                    <div>
+                        <h3>GOLD</h3>
+                        <small>METERIAL</small>
+                    </div>
+                </div>
+
+                <h2>1,47,989.00</h2>
+                <p class="green">UP (+0.42%)</p>
+            </div>
+
+
+            <div class="market-card">
+                <div class="market-name">
+                    <div class="coin">BTC</div>
+                    <div>
+                        <h3>BITCOIN</h3>
+                        <small>CRYPTO</small>
+                    </div>
+                </div>
+
+                <h2>$108,420</h2>
+                <p class="red">DOWN (-0.38%)</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANALYSIS -->
+    <section class="analysis" id="analysis">
+
+        <div class="analysis-text">
+
+            <span>MARKET ANALYSIS</span>
+
+            <h2>
+                Make decisions with
+                <strong>better insights.</strong>
+            </h2>
+
+            <p>
+                Follow market movements, understand trends and
+                develop a disciplined approach to trading.
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>Market Tracking</span>
+                </div>
+
+                <div>
+                    <strong>4+</strong>
+                    <span>Market Categories</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Learning Focus</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="analysis-chart">
+
+            <div class="chart-header">
+                <div>
+                    <small>Portfolio Simulation</small>
+                    <h2></h2>
+                </div>
+
+                <span class="green">+8.42%</span>
+            </div>
+
+            <canvas id="mainChart"></canvas>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-card">
+
+            <div class="profile-circle">
+                AK
+            </div>
+
+            <div>
+                <span>TRADING BRAND</span>
+
+                <h2>Abhijit Karmakar</h2>
+
+                <p>
+                    A personal trading and market-analysis brand focused
+                    on learning, market awareness and disciplined trading.
+                </p>
+
+                <button class="primary-btn" onclick="showMessage()">
+                    Connect With Me
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            <strong>
+              AK
+            </strong>
+            <div>
+                <h3>Abhijit Karmakar</h3>
+                <small>TRADING</small>
+            </div>
+        </div>
+
+        <p>
+            ABHIJIT KARMAKAR Â© 2026 Abhijit Karmakar Trading. Demo website.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
